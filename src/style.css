@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    height: 100vh;
+    background-color:black;
+    flex-direction: column;
+}
+.myCanvas{
+    margin: auto;
+    background-color:white;
+}
+.svg{
+    margin-top: 20px;
+}
+.tool{
+    background-color: #ccc;
+    margin-top: 10px;
+}
+.tools_bar{
+    position: absolute;
+    top:30px;
+    left: 20px;
+    background-color: #2f2f2c;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.palitra{
+    position: absolute;
+    left: 20px;
+    top: 300px;
+    background-color: #2f2f2c;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#layers{
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background-color: #2f2f2c;
+    padding: 10px;
+    border-radius: 5px;
+}
+#layers div{
+    margin-bottom: 10px;
+}
