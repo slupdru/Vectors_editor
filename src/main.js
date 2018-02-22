@@ -124,7 +124,7 @@ let move_on_mosedown = function(e){
         }
     }
   }
-//   ddddddd
+//   dddddddssssssss
   b_canvas.onmouseup = function(){
     document.onmousemove = null;
     b_canvas.onmouseup = null;
