@@ -114,8 +114,8 @@ palitra.onclick = function(event){
 let move_on_mosedown = function(e){ 
     document.onmousemove = function(e){
     b_context.clearRect(0,0,b_canvas.clientWidth,b_canvas.clientHeight);
-    mass_of_figures[Basic_figure.active_number].start_x += e.pageX - b_canvas.offsetLeft-mass_of_figures[Basic_figure.active_number].start_x;
-    mass_of_figures[Basic_figure.active_number].start_y += e.pageY - b_canvas.offsetTop-mass_of_figures[Basic_figure.active_number].start_y;
+    mass_of_figures[Basic_figure.active_number].start_x = e.pageX - b_canvas.offsetLeft;
+    mass_of_figures[Basic_figure.active_number].start_y = e.pageY - b_canvas.offsetTop;
     mass_of_figures[Basic_figure.active_number].x += e.pageX - b_canvas.offsetLeft-mass_of_figures[Basic_figure.active_number].start_x;
     mass_of_figures[Basic_figure.active_number].y += e.pageY - b_canvas.offsetTop-mass_of_figures[Basic_figure.active_number].start_y;
     for (let i = 0; i < mass_of_figures.length; i++) {
@@ -124,13 +124,14 @@ let move_on_mosedown = function(e){
         }
     }
   }
+//   ddddddd
   b_canvas.onmouseup = function(){
     document.onmousemove = null;
     b_canvas.onmouseup = null;
     console.log(mass_of_figures);
 }
 }
-let drow_on_mousedown = function(e){ // рисуем прямоугольник
+let drow_on_mousedown = function(e){ 
     mass_of_figures.push(eval (`new ${Basic_figure.figure_name}()`));
     mass_of_figures[mass_of_figures.length-1].start_x = e.pageX - b_canvas.offsetLeft;
     mass_of_figures[mass_of_figures.length-1].start_y = e.pageY - b_canvas.offsetTop;
